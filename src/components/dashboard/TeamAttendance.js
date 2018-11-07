@@ -1,6 +1,6 @@
 import React from 'react';
-import ShadowBox from '../../containers/layouts/ShadowBox';
-import DashboardListItem from './DashboardListItem';
+import ShadowBox from 'containers/layouts/ShadowBox';
+import DashboardListItem from 'components/dashboard/DashboardListItem';
 
 export default function TeamAttendance({
   teamAttendance,

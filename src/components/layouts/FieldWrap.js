@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import Label from '../forms/Label';
+import Label from 'components/forms/Label';
 
 const INPUT_WRAP_CONTAINER_STYLE = {
   boxSizing: 'border-box',

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import ShadowBox from '../../containers/layouts/ShadowBox';
-import DashboardListItem from './DashboardListItem';
+import ShadowBox from 'containers/layouts/ShadowBox';
+import DashboardListItem from 'components/dashboard/DashboardListItem';
 
 const NO_DISCREPANCY_STYLE = {
   textAlign: 'center',

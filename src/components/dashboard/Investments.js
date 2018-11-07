@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import { Link } from 'react-router-dom';
-import ShadowBox from '../../containers/layouts/ShadowBox';
-import Button, { INVESTMENT_BUTTON } from '../forms/Button';
-import investmentIcon from '../../assets/images/investments-icon.png';
+import ShadowBox from 'containers/layouts/ShadowBox';
+import Button, { INVESTMENT_BUTTON } from 'components/forms/Button';
+import investmentIcon from 'assets/images/investments-icon.png';
 
 const INVESTMENT_ICON_STYLE = {
   width: '80%',

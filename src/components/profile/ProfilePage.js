@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import AdminWrapper from '../layouts/AdminWrapper';
-import ClearfixBox from '../layouts/ClearfixBox';
-import ShadowBox from '../layouts/ShadowBox';
-import ProfileFormContainer from '../../containers/profile/ProfileFormContainer';
-import ProfilePreview from '../../containers/profile/ProfilePreview';
+import AdminWrapper from 'components/layouts/AdminWrapper';
+import ClearfixBox from 'components/layouts/ClearfixBox';
+import ShadowBox from 'components/layouts/ShadowBox';
+import ProfileFormContainer from 'containers/profile/ProfileFormContainer';
+import ProfilePreview from 'containers/profile/ProfilePreview';
 
 export default class ProfilePage extends Component {
   componentDidMount() {

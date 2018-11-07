@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import { Link } from 'react-router-dom';
-import HeaderWrapper from './HeaderWrapper';
-import HeaderLogo from './HeaderLogo';
-import Dropdown from '../forms/Dropdown';
+import HeaderWrapper from 'components/header/HeaderWrapper';
+import HeaderLogo from 'components/header/HeaderLogo';
+import Dropdown from 'components/forms/Dropdown';
 
 const TOOLBAR_STYLE = {
   float: 'right', 

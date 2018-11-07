@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import FormElements from '../../containers/profile/FormElements';
-import Button, { MEMBER_BUTTON } from '../forms/Button';
+import FormElements from 'containers/profile/FormElements';
+import Button, { MEMBER_BUTTON } from 'components/forms/Button';
 
 export default function ProfileFormContainer({
   isFormComplete,

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import { Redirect } from 'react-router-dom';
-import AdminWrapper from '../layouts/AdminWrapper';
-import TeamAttendance from '../../containers/dashboard/TeamAttendance';
-import Announcement from '../../containers/dashboard/Announcement';
-import ResolutionCenter from '../../containers/dashboard/ResolutionCenter';
-import Investments from './Investments';
+import AdminWrapper from 'components/layouts/AdminWrapper';
+import TeamAttendance from 'containers/dashboard/TeamAttendance';
+import Announcement from 'containers/dashboard/Announcement';
+import ResolutionCenter from 'containers/dashboard/ResolutionCenter';
+import Investments from 'components/dashboard/Investments';
 import MyStuff from './MyStuff';
 
 export default class Dashboard extends Component {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import SpinnerB from '../common/SpinnerB';
+import SpinnerB from 'components/common/SpinnerB';
 
 const RISK_TOLERANCE_DETAIL_STYLE = {
   textAlign: 'center',

@@ -1,6 +1,6 @@
 import React from 'react';
-import Button, { MEMBER_BUTTON } from '../forms/Button';
-import Spinner from '../common/Spinner';
+import Button, { MEMBER_BUTTON } from 'components/forms/Button';
+import Spinner from 'components/common/Spinner';
 
 export default function SaveButton({
   isLoadingOnSave,

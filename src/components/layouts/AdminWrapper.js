@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import Header from '../../containers/header/Header';
+import Header from 'containers/header/Header';
 
 const ADMIN_CONTENT_STYLE = { 
   width: '100%', 

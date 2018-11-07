@@ -1,6 +1,6 @@
 import React from 'react';
-import FormElements from '../forms/FormElements';
 import { StyleSheet, css } from 'aphrodite/no-important';
+import FormElements from 'components/forms/FormElements';
 
 const CONTAINER_LABEL_STYLE = {
   marginBottom: '15px',

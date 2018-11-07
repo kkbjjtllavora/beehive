@@ -1,9 +1,9 @@
 import { NOT_AT_ALL, OPEN_TO_SOME_RISK, VERY_RISKY } from './investmentOptions';
-import titleLogo from '../../../assets/images/bdo-logo.png';
-import titleLogo2 from '../../../assets/images/sunlife-logo.png';
-import gaugeLevel1 from '../../../assets/images/risk-tolerance-icon.png';
-import gaugeLevel2 from '../../../assets/images/risk-tolerance-icon-2.png';
-import gaugeLevel3 from '../../../assets/images/risk-tolerance-icon-3.png';
+import titleLogo from 'assets/images/bdo-logo.png';
+import titleLogo2 from 'assets/images/sunlife-logo.png';
+import gaugeLevel1 from 'assets/images/risk-tolerance-icon.png';
+import gaugeLevel2 from 'assets/images/risk-tolerance-icon-2.png';
+import gaugeLevel3 from 'assets/images/risk-tolerance-icon-3.png';
 
 export const BDO     = 'bdo';
 export const sunLife = 'sun-life';

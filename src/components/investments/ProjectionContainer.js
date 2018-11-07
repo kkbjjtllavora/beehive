@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import { getRandomArbitrary, formatMoney } from '../../utils/number';
-import SpinnerB from '../common/SpinnerB';
+import { getRandomArbitrary, formatMoney } from 'utils/number';
+import SpinnerB from 'components/common/SpinnerB';
 
 const PROJECTION_CONTAINER_STYLE = {
   textAlign: 'center',

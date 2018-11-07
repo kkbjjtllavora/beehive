@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import AdminWrapper from '../layouts/AdminWrapper';
-import ClearfixBox from '../layouts/ClearfixBox';
-import ShadowBox from '../layouts/ShadowBox';
-import Title, { TITLE_B } from '../common/Title';
-import userIcon from '../../assets/images/user-icon-3.png';
+import AdminWrapper from 'components/layouts/AdminWrapper';
+import ClearfixBox from 'components/layouts/ClearfixBox';
+import ShadowBox from 'components/layouts/ShadowBox';
+import Title, { TITLE_B } from 'components/common/Title';
+import userIcon from 'assets/images/user-icon-3.png';
 
 const USER_CONTAINER_STYLE = {
   width: '50%',

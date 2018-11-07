@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import ClearfixBox from '../layouts/ClearfixBox';
-import timeHorizonIcon from '../../assets/images/time-horizon-icon.png';
+import ClearfixBox from 'components/layouts/ClearfixBox';
+import timeHorizonIcon from 'assets/images/time-horizon-icon.png';
 
 const GAUGE_CONTAINER_STYLE = {
   marginBottom: '15px',

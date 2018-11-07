@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import ClearfixBox from '../layouts/ClearfixBox';
+import ClearfixBox from 'components/layouts/ClearfixBox';
 
 const DETAIL_ITEM_LABEL_STYLE = {
   width: '40%',

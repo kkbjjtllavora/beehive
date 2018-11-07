@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import Title from '../common/Title';
-import Spinner from '../common/Spinner';
+import Title from 'components/common/Title';
+import Spinner from 'components/common/Spinner';
 
 const WITH_TITLE = 'with-title';
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import ContentWrapper from './ContentWrapper';
-import ContentTitle from './ContentTitle';
-import GaugeContainer from '../../containers/investments/GaugeContainer';
-import ProjectionContainer from '../../containers/investments/ProjectionContainer';
-import InvestmentDetails from './InvestmentDetails';
-import RiskToleranceDetail from '../../containers/investments/RiskToleranceDetail';
-import investmentConstants from './fieldConstants/investmentConstants';
+import ContentWrapper from 'components/investments/ContentWrapper';
+import ContentTitle from 'components/investments/ContentTitle';
+import GaugeContainer from 'containers/investments/GaugeContainer';
+import ProjectionContainer from 'containers/investments/ProjectionContainer';
+import InvestmentDetails from 'components/investments/InvestmentDetails';
+import RiskToleranceDetail from 'containers/investments/RiskToleranceDetail';
+import investmentConstants from 'components/investments/fieldConstants/investmentConstants';
 
 export default function InvestmentsContent() {
 

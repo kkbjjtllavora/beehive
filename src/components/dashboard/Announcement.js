@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import moment from 'moment';
-import ShadowBox from '../../containers/layouts/ShadowBox';
-import DashboardListItem from './DashboardListItem';
-import thumb from '../../assets/images/user-icon-2.png';
+import ShadowBox from 'containers/layouts/ShadowBox';
+import DashboardListItem from 'components/dashboard/DashboardListItem';
+import thumb from 'assets/images/user-icon-2.png';
 
 const NO_ANNOUNCEMENT_STYLE = {
   textAlign: 'center',

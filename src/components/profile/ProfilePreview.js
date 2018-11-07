@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import { Link } from 'react-router-dom';
-import Button, { MEMBER_BUTTON, LOGIN_BUTTON } from '../forms/Button';
-import SpinnerC from '../common/SpinnerC';
-import ProfilePreviewTable from '../../containers/profile/ProfilePreviewTable';
+import Button, { MEMBER_BUTTON, LOGIN_BUTTON } from 'components/forms/Button';
+import SpinnerC from 'components/common/SpinnerC';
+import ProfilePreviewTable from 'containers/profile/ProfilePreviewTable';
 
 const DEFAULT  = 'DEFAULT';
 const COMPLETE = 'COMPLETE';
