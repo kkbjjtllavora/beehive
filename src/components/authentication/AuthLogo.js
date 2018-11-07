@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import logo from '../../assets/images/logo_2.png';
+import logo from 'assets/images/logo_2.png';
 
 const LOGO_CONTAINER_STYLE = {
   marginBottom: '15px'

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import { Link } from 'react-router-dom';
-import { NewUserRoute } from '../../constants/Routes';
+import { NewUserRoute } from 'constants/Routes';
 
 const NEW_USER_LINK_STYLE = {
   color: '#f39c12',

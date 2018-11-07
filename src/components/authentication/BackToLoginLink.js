@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import { Link } from 'react-router-dom';
-import { LoginRoute } from '../../constants/Routes';
+import { LoginRoute } from 'constants/Routes';
 
 const BACK_TO_LOGIN_BUTTON_STYLE = {
   color: '#34495e',
