@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import ProfilePreview from '../../components/profile/ProfilePreview';
-import { saveFormData, backToEditProfile } from './store/actions';
-import { addUserComplete } from '../authentication/store/actions';
+import ProfilePreview from 'components/profile/ProfilePreview';
+import { saveFormData, backToEditProfile } from 'containers/profile/store/actions';
+import { addUserComplete } from 'containers/authentication/store/actions';
 
 const mapStateToProps = ({
   user: {

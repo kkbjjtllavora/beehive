@@ -1,6 +1,6 @@
-import NewUserPage from '../../components/authentication/NewUserPage';
 import { connect } from 'react-redux';
-import { submitUser } from './store/actions';
+import NewUserPage from 'components/authentication/NewUserPage';
+import { submitUser } from 'containers/authentication/store/actions';
 
 const mapStateToProps = ({ 
   user: { 

@@ -1,5 +1,5 @@
-import axios from '../../../axios-instance';
-import * as c from './actionTypes';
+import * as c from 'containers/profile/store/actionTypes';
+import axios from 'axios-instance';
 
 // populating info fields and values events
 export const updateFieldValue = (name, value) => ({

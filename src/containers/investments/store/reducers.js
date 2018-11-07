@@ -1,6 +1,6 @@
 import { Record } from 'immutable';
-import * as c from './actionTypes';
-import investmentOptions from '../../../components/investments/fieldConstants/investmentOptions';
+import investmentOptions from 'components/investments/fieldConstants/investmentOptions';
+import * as c from 'containers/investments/store/actionTypes';
 
 const investmentsState = new Record({
   investmentFormFields:    investmentOptions,

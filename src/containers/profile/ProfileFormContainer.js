@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import ProfileFormContainer from '../../components/profile/ProfileFormContainer';
-import { submitInfo, submitBackButton } from './store/actions';
+import ProfileFormContainer from 'components/profile/ProfileFormContainer';
+import { submitInfo, submitBackButton } from 'containers/profile/store/actions';
 
 import { INITIAL_INFO } from './store/reducers';
 

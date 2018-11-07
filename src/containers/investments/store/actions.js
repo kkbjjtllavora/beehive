@@ -1,5 +1,5 @@
 import * as c from './actionTypes';
-import { saveAmount, investmentPeriod } from '../../../components/investments/fieldConstants/investmentOptions';
+import { saveAmount, investmentPeriod } from 'components/investments/fieldConstants/investmentOptions';
 
 export const updateSaveAmountStart = () => ({
   type: c.UPDATE_SAVE_AMOUNT_START,

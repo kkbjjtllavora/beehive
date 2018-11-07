@@ -1,5 +1,5 @@
 import { connect }  from 'react-redux';
-import CompanyPage from '../../components/company/CompanyPage';
+import CompanyPage from 'components/company/CompanyPage';
 
 const mapStateToProps = ({
   teamMembers: {

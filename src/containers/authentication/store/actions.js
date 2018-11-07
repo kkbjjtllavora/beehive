@@ -1,7 +1,7 @@
 import moment from 'moment';
-import axios from '../../../axios-instance';
-import * as c from './actionTypes';
-import { ADD_USER_URL, SIGNIN_USER_URL } from '../../../constants/Api';
+import axios from 'axios-instance';
+import * as c from 'containers/authentication/store/actionTypes';
+import { ADD_USER_URL, SIGNIN_USER_URL } from 'constants/Api';
 
 export const addUserStart = () => ({ 
   type: c.ADD_USER_START 

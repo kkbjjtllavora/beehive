@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import '../assets/style.css';
-import * as Routes from '../constants/Routes';
+import 'assets/style.css';
+import * as Routes from 'constants/Routes';
 
 // authentication components
 import LoginPage from './authentication/LoginPage';

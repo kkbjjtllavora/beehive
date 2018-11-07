@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import FormElements from '../../components/forms/FormElements';
-import { updateField } from './store/actions';
+import FormElements from 'components/forms/FormElements';
+import { updateField } from 'containers/profile/store/actions';
 
 const mapDispatchToProps = dispatch => ({
   onChange: field => {

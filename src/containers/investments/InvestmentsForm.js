@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import InvestmentsForm from '../../components/investments/InvestmentsForm';
-import { updateFormFields, resetFormFields } from './store/actions';
+import InvestmentsForm from 'components/investments/InvestmentsForm';
+import { updateFormFields, resetFormFields } from 'containers/investments/store/actions';
 
 const mapStateToProps = ({
   investments: {

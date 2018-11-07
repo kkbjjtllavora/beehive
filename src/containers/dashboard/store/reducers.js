@@ -1,5 +1,5 @@
 import { Record } from 'immutable';
-import * as c from './actionTypes';
+import * as c from 'containers/dashboard/store/actionTypes';
 
 const teamMembersState = new Record({
   teamMembers:  [],

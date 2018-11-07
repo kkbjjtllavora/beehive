@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import ProfilePreviewTable from '../../components/profile/ProfilePreviewTable';
+import ProfilePreviewTable from 'components/profile/ProfilePreviewTable';
 
 const mapDispatchToProps = ({
   profile: {
