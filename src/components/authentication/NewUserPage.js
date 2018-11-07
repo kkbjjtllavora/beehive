@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import AuthLayout from 'src/components/authentication/AuthLayout';
-import { checkValidity } from 'src/utils/validation';
-import FormElements from 'src/components/forms/FormElements';
-import Form from 'src/components/forms/Form';
-import BackToLoginLink from 'src/components/authentication/BackToLoginLink';
-import AuthButton from 'src/components/authentication/AuthButton';
-import AuthErrorMessage from 'src/components/authentication/AuthErrorMessage';
-import newUserFields from 'src/components/authentication/fieldConstants/newUserFields';
+import AuthLayout from './AuthLayout';
+import { checkValidity } from '../../utils/validation';
+import FormElements from '../forms/FormElements';
+import Form from '../forms/Form';
+import BackToLoginLink from './BackToLoginLink';
+import AuthButton from './AuthButton';
+import AuthErrorMessage from './AuthErrorMessage';
+import newUserFields from './fieldConstants/newUserFields';
 
 const initialState = {
   formFields: newUserFields,

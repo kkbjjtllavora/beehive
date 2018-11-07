@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import Button, { LOGIN_BUTTON } from 'src/components/forms/Button'; 
-import SpinnerB from 'src/components/common/SpinnerB';
+import Button, { LOGIN_BUTTON } from '../forms/Button'; 
+import SpinnerB from '../common/SpinnerB';
 
 const s = StyleSheet.create({
   authButtonContainer: { textAlign: 'center' },

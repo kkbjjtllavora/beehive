@@ -1,5 +1,5 @@
-import { INPUT } from 'src/components/forms/FormElements';
-import { MEMBER_INPUT } from 'src/components/forms/Input';
+import { INPUT } from '../../forms/FormElements';
+import { MEMBER_INPUT } from '../../forms/Input';
 
 // export const firstname   = 'FIRSTNAME';
 // export const lastname    = 'LASTNAME';
