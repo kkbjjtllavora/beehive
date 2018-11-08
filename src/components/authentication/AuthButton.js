@@ -1,20 +1,21 @@
 import React from 'react';
-import { StyleSheet, css } from 'aphrodite/no-important';
+import injectSheet from 'react-jss';
 import Button, { LOGIN_BUTTON } from 'components/forms/Button'; 
 import SpinnerB from 'components/common/SpinnerB';
 
-const s = StyleSheet.create({
+const styles ={
   authButtonContainer: { textAlign: 'center' },
-});
+}
 
-export default function AuthButton({
+const AuthButton = ({
   isLoading,
   isFormValid,
-  children
-}) {
+  children,
+  classes
+}) => {
   return  (
     
-      <div className={css(s.authButtonContainer)}>
+      <div className={classes.authButtonContainer}>
         {
           !isLoading ? 
             <Button disabled={!isFormValid} variety={LOGIN_BUTTON}>
@@ -26,3 +27,5 @@ export default function AuthButton({
       
   )
 }
+
+export default injectSheet(styles)(AuthButton);

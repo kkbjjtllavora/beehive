@@ -22,11 +22,10 @@ export default function Announcement({
   const announcementsList = newUsersArray.map(({
     firstName,
     lastName
-  }, idx) => <DashboardListItem 
-          thumbSrc={thumb}
-          key={idx}
-          mainInfo={`${firstName} ${lastName}`}
-          rightInfo="First Day" />
+  }, idx) => <DashboardListItem thumbSrc={thumb}
+                                key={idx}
+                                mainInfo={`${firstName} ${lastName}`}
+                                rightInfo="First Day" />
   );
 
   const announcement = newUsersArray.length !== 0 ?

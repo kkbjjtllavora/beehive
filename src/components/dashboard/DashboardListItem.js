@@ -1,39 +1,29 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
 
-const LIST_ITEM_STYLE = {
-  borderBottom: '1px solid #eaeff0',
-  padding: '8px 0',
-  fontSize: '14px',
-}
-
-const TIME_IN_STYLE = {
-  float: 'right',
-  fontWeight: 'normal',
-  color: '#2ecc71',
-}
-
-const THUMB_STYLE = {
-  width: '21px',
-  float: 'left',
-  marginRight: '10px',
-}
-
-const RESOLUTION_DATE_STYLE = {
-  width: '110px',
-  display: 'inline-block',
-} 
-
-const RESOLUTION_DETAIL_STYLE = {
-  float: 'right',
-}
-
 const s = StyleSheet.create({
-  listItem:         LIST_ITEM_STYLE,
-  timeIn:           TIME_IN_STYLE,
-  thumb:            THUMB_STYLE,
-  resolutionDate:   RESOLUTION_DATE_STYLE,
-  resolutionDetail: RESOLUTION_DETAIL_STYLE,
+  listItem: {
+    borderBottom: '1px solid #eaeff0',
+    padding: '8px 0',
+    fontSize: '14px',
+    display: 'flex',
+    justifyContent: 'space-between',
+
+    '&:last-child': {
+      borderBottom: 'none',
+    }
+  },
+  
+  timeIn: {
+    fontWeight: 'normal',
+    color: '#2ecc71',
+  },
+
+  thumb: { 
+    width: '20px', 
+    marginRight: '10px',
+    float: 'left',
+  },
 });
 
 export default function DashboardListItem({
@@ -45,33 +35,27 @@ export default function DashboardListItem({
 }) {
   return (
     <li className={css(s.listItem)}>
-      <p>
-        <span>
-          { thumbSrc && 
-              <img src={thumbSrc} 
-                   alt={thumbSrc} 
-                   className={css(s.thumb)} /> }
-        </span>
+      { resolutionDate && 
+        <span className={css(s.resolutionDate)}>
+          { resolutionDate }
+        </span>  }
 
-        { resolutionDate && 
-          <span className={css(s.resolutionDate)}>
-            { resolutionDate }
-          </span>
-        }
+      { resolutionDetail &&
+        <span className={css(s.resolutionDetail)}>
+          { resolutionDetail }
+        </span> }
 
-        {
-          resolutionDetail &&
-          <span className={css(s.resolutionDetail)}>
-            { resolutionDetail }
-          </span>
-        }
+      <div>
+        { thumbSrc && <span><img src={thumbSrc} 
+                               alt={thumbSrc} 
+                               className={css(s.thumb)} /></span> }
 
         { mainInfo }
-         
-        <span className={css(s.timeIn)}>
-          { rightInfo }
+      </div>
+       
+      <span className={css(s.timeIn)}>
+        { rightInfo }
       </span>
-      </p>
     </li>
   )
 }

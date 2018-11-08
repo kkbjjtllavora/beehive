@@ -20,9 +20,9 @@ export default function Backdrop({
   isOpen
 }) {
   return isOpen ? (
-      <div 
-        className={css(s.backdropContainer)} 
-        onClick={onClick}></div>
+      <div className={css(s.backdropContainer)} 
+           onClick={onClick}>
+      </div>
     ): null
   
 }

@@ -53,7 +53,11 @@ export const authUserFail = (error) => ({
   type: c.AUTH_USER_FAIL
 });
 
-export const authUser = (idToken, localId, expiresIn) => ({
+export const authUser = (
+  idToken, 
+  localId, 
+  expiresIn
+) => ({
   idToken,
   localId,
   expiresIn,
@@ -65,7 +69,13 @@ export const setUserAttendance = (data) => ({
   type: c.SET_USER_ATTENDANCE,
 });
 
-export const updateUserAttendance = (userId, data, date, idToken, expiresIn) => {
+export const updateUserAttendance = (
+  userId, 
+  data, 
+  date, 
+  idToken, 
+  expiresIn
+) => {
   return dispatch => {
     axios.put(`/users/${userId}/attendance/${date}.json`, data)
       .then(responseY => {
@@ -81,7 +91,11 @@ export const updateUserAttendance = (userId, data, date, idToken, expiresIn) => 
   }
 }
 
-export const getUserAttendance = (localId, idToken, expiresIn) => {
+export const getUserAttendance = (
+  localId, 
+  idToken, 
+  expiresIn
+) => {
   return dispatch => {
     const date = moment().format('MM-DD-YY');
     const time = moment().format('hh:mm A');
