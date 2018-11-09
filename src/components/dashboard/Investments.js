@@ -41,7 +41,7 @@ const s = StyleSheet.create({
   detailsContainer:       DETAILS_CONTAINER_STYLE,
 });
 
-export default function Investments() {
+const Investments = () => {
   return (
     <ShadowBox title="Investments" width="100%" titleColor="#2ecc71">
       <div className={css(s.detailsContainer)}>
@@ -66,3 +66,5 @@ export default function Investments() {
     </ShadowBox>
   )
 }
+
+export default Investments;

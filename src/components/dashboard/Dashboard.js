@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import { Redirect } from 'react-router-dom';
 import AdminWrapper from 'components/layouts/AdminWrapper';
@@ -8,9 +9,10 @@ import ResolutionCenter from 'containers/dashboard/ResolutionCenter';
 import Investments from 'components/dashboard/Investments';
 import MyStuff from './MyStuff';
 
-export default class Dashboard extends Component {
+class Dashboard extends Component {
   componentDidMount() {
-    this.props.onGetTeamMembers(this.props.teamName);
+    const { onGetTeamMembers, teamName } = this.props;
+    onGetTeamMembers(teamName);
   }
 
   render() {
@@ -40,6 +42,14 @@ export default class Dashboard extends Component {
       </AdminWrapper>
     )
   }
+}
+
+export default Dashboard;
+
+Dashboard.propTypes = {
+  onGetTeamMembers: PropTypes.func,
+  teamName:         PropTypes.string,
+  addUserDone:      PropTypes.bool
 }
 
 const DEFAULT_BOX_CONTAINER_STYLE = {

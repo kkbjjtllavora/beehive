@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import ClearfixBox from 'components/layouts/ClearfixBox';
 
@@ -33,9 +34,9 @@ const s = StyleSheet.create({
   investmentDetails:     INVESTMENT_DETAILS_STYLE,
 });
 
-export default function InvestmentDetails({
+const InvestmentDetails = ({
   detailsArray
-}) {
+}) => {
   const investmentDetails = detailsArray.map(({
     label, 
     data
@@ -53,4 +54,10 @@ export default function InvestmentDetails({
       <li><ClearfixBox /></li>
     </ul>
   )
+}
+
+export default InvestmentDetails;
+
+InvestmentDetails.propTypes = {
+  detailsArray: PropTypes.array
 }

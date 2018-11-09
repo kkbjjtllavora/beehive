@@ -17,14 +17,15 @@ const PENDING_REQUEST_DETAIL_STYLE = {
 }
 
 const s = StyleSheet.create({
-  myStuffLabel: MY_STUFF_LABEL_STYLE,
+  myStuffLabel:         MY_STUFF_LABEL_STYLE,
   pendingRequestDetail: PENDING_REQUEST_DETAIL_STYLE,
 });
 
-const MyStuffLabel = ({ children }) => 
+const MyStuffLabel = ({ children }) => (
   <h3 className={css(s.myStuffLabel)}>{ children }</h3>
+)
 
-export default function MyStuff() {
+const MyStuff = () => {
   return (
     <ShadowBox title="My Stuff" width="100%" titleColor="#3498db">
       <MyStuffLabel>Pending Requests</MyStuffLabel>
@@ -49,3 +50,5 @@ export default function MyStuff() {
     </ShadowBox>
   )
 }
+
+export default MyStuff;

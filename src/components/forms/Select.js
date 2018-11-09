@@ -29,7 +29,7 @@ const s = StyleSheet.create({
   [MEMBER_SELECT]:  MEMBER_SELECT_STYLE,
 });
 
-export default class Select extends Component {
+class Select extends Component {
   constructor(props) {
     super(props);
     this.handleOnChange.bind(this)
@@ -55,6 +55,8 @@ export default class Select extends Component {
     )
   }
 }
+
+export default Select;
 
 Select.defaultProps = {
   multiple:  false,

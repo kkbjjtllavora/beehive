@@ -25,12 +25,12 @@ const s = StyleSheet.create({
   validationCheck:      VALIDATION_CHECK_STYLE,
 });
 
-export default function FieldWrap({
+const FieldWrap = ({
   children,
   label,
   valid,
   touched,
-}) {
+}) => {
   const renderLabel = (label) =>
     <Label>{label}</Label>;
 
@@ -50,6 +50,8 @@ export default function FieldWrap({
     </div>
   )
 }
+
+export default FieldWrap;
 
 FieldWrap.defaultProps = {
   label: ''

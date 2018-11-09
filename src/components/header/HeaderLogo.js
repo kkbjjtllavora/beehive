@@ -15,10 +15,12 @@ const s = StyleSheet.create({
   headerLogo: HEADER_LOGO_STYLE,
 });
 
-export default function HeaderLogo() {
+const HeaderLogo = () => {
   return (
     <Link to={DashboardRoute.path}>
       <img src={logo} className={css(s.headerLogo)} alt="Beebo Hive" />
     </Link>
   )
 }
+
+export default HeaderLogo;

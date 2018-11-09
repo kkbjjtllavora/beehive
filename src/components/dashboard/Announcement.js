@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import moment from 'moment';
 import ShadowBox from 'containers/layouts/ShadowBox';
@@ -16,9 +17,9 @@ const s = StyleSheet.create({
   noAnnouncement: NO_ANNOUNCEMENT_STYLE,
 });
 
-export default function Announcement({
+const Announcement = ({
   newUsersArray
-}) {
+}) => {
   const announcementsList = newUsersArray.map(({
     firstName,
     lastName
@@ -41,4 +42,10 @@ export default function Announcement({
       </ul>
     </ShadowBox>
   )
+}
+
+export default Announcement;
+
+Announcement.propTypes = {
+  newUsersArray: PropTypes.array
 }

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Form from 'components/forms/Form';
 import { checkValidity } from 'utils/validation';
 import FormElements from 'components/forms/FormElements';
@@ -13,7 +14,7 @@ const initialState = {
   isFormValid: false,
 }
 
-export default class Login extends Component {
+class LoginPage extends Component {
   state = initialState;
 
   handleChange = (data) => {
@@ -99,4 +100,12 @@ export default class Login extends Component {
       </AuthLayout>
     )
   }
+}
+
+export default LoginPage;
+
+LoginPage.propTypes = {
+  signInUser:          PropTypes.func,
+  signinUserError:     PropTypes.string,
+  isSigninUserLoading: PropTypes.bool,
 }

@@ -8,8 +8,7 @@ import InvestmentDetails from 'components/investments/InvestmentDetails';
 import RiskToleranceDetail from 'containers/investments/RiskToleranceDetail';
 import investmentConstants from 'components/investments/fieldConstants/investmentConstants';
 
-export default function InvestmentsContent() {
-
+const InvestmentsContent = () => {
   const investmentContent = investmentConstants.map(({
     type,
     title,
@@ -48,6 +47,8 @@ export default function InvestmentsContent() {
     </div>
   )
 }
+
+export default InvestmentsContent;
 
 const CONTAINER_LABEL_STYLE = {
   marginBottom: '15px',

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
 
 const s = StyleSheet.create({
@@ -26,13 +27,13 @@ const s = StyleSheet.create({
   },
 });
 
-export default function DashboardListItem({
+const DashboardListItem = ({
   thumbSrc,
   mainInfo,
   rightInfo,
   resolutionDate,
   resolutionDetail
-}) {
+}) => {
   return (
     <li className={css(s.listItem)}>
       { resolutionDate && 
@@ -58,4 +59,23 @@ export default function DashboardListItem({
       </span>
     </li>
   )
+}
+
+export default DashboardListItem;
+
+DashboardListItem.propTypes = {
+  thumbSrc:         PropTypes.string,
+  mainInfo:         PropTypes.oneOfType([
+                      PropTypes.string,
+                      PropTypes.node
+                    ]),
+  rightInfo:        PropTypes.oneOfType([
+                      PropTypes.string,
+                      PropTypes.node
+                    ]),
+  resolutionDate:   PropTypes.string,
+  resolutionDetail: PropTypes.oneOfType([
+                      PropTypes.string,
+                      PropTypes.node
+                    ]),
 }

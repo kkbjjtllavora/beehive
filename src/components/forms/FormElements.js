@@ -8,7 +8,7 @@ export const INPUT       = 'INPUT';
 export const SELECT      = 'SELECT';
 export const TEXTAREA    = 'TEXTAREA';
 
-export default function FormElements({
+const FormElements = ({
   elementConfig,
   elementType,
   value,
@@ -17,7 +17,7 @@ export default function FormElements({
   label,
   onChange,
   touched,
-}) {
+}) => {
   let formElement = null;
 
   switch(elementType) {
@@ -64,6 +64,8 @@ export default function FormElements({
     </FieldWrap>
   )
 }
+
+export default FormElements;
 
 FormElements.propTypes = {
   elementConfig:    PropTypes.object,

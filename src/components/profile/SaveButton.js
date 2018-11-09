@@ -1,15 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button, { MEMBER_BUTTON } from 'components/forms/Button';
 import Spinner from 'components/common/Spinner';
 
-export default function SaveButton({
+const SaveButton = ({
   isLoadingOnSave,
   addUserId,
   userId,
   onSaveData,
   formData,
   isFormComplete
-}) {
+}) => {
   const saveUserId = addUserId ? addUserId : userId;
 
   const saveButton = !isLoadingOnSave ? 
@@ -19,4 +20,15 @@ export default function SaveButton({
       : <SpinnerC />
 
   return isFormComplete ? saveButton : null;
+}
+
+export default SaveButton;
+
+SaveButton.propTypes = {
+  isLoadingOnSave: PropTypes.bool,
+  addUserId:       PropTypes.func,
+  userId:          PropTypes.string,
+  onSaveData:      PropTypes.func,
+  formData:        PropTypes.object,
+  isFormComplete:  PropTypes.bool
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import AdminWrapper from 'components/layouts/AdminWrapper';
 import ClearfixBox from 'components/layouts/ClearfixBox';
@@ -73,7 +74,7 @@ const s =StyleSheet.create({
 const UserDetail = ({ children }) =>
   <p className={css(s.userDetail)}>{ children }</p>;
 
-export default class CompanyPage extends Component {
+class CompanyPage extends Component {
   render() {
     const userInfos = this.props.userInfos;
 
@@ -120,4 +121,10 @@ export default class CompanyPage extends Component {
       </AdminWrapper>
     )
   } 
+}
+
+export default CompanyPage;
+
+CompanyPage.propTypes = {
+  userInfos: PropTypes.array
 }

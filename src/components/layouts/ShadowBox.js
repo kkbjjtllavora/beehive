@@ -26,14 +26,14 @@ const s = StyleSheet.create({
   shadowBoxBody:  SHADOW_BOX_BODY_STYLE,
 });
 
-export default function ShadowBox({
+const ShadowBox = ({
   children,
   withTitle,
   title,
   width,
   titleColor,
   isLoading,
-}) {
+}) => {
   const variety = WITH_TITLE;
 
   const renderTitle = (title) => 
@@ -52,13 +52,18 @@ export default function ShadowBox({
   )
 }
 
+export default ShadowBox;
+
 ShadowBox.defaultProps = {
   title:     '',
   withTitle: true
 }
 
 ShadowBox.propTypes = {
-  children:  PropTypes.node.isRequired,
-  withTitle: PropTypes.bool,
-  title:     PropTypes.string
+  children:   PropTypes.node.isRequired,
+  withTitle:  PropTypes.bool,
+  title:      PropTypes.string,
+  width:      PropTypes.string,
+  titleColor: PropTypes.string,
+  isLoading:  PropTypes.bool
 }

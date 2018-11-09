@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import Header from 'containers/header/Header';
 
@@ -12,9 +13,9 @@ const s = StyleSheet.create({
   adminContent: ADMIN_CONTENT_STYLE,
 });
 
-export default function AdminWrapper({
+const AdminWrapper = ({
   children
-}) {
+}) => {
   return (
     <div>
       <Header />
@@ -24,4 +25,10 @@ export default function AdminWrapper({
       </div>
     </div>
   )
+}
+
+export default AdminWrapper;
+
+AdminWrapper.propTypes = {
+  children: PropTypes.node.isRequired
 }

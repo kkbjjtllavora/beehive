@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import { Link } from 'react-router-dom';
 import Button, { MEMBER_BUTTON, LOGIN_BUTTON } from 'components/forms/Button';
@@ -8,7 +9,7 @@ import ProfilePreviewTable from 'containers/profile/ProfilePreviewTable';
 const DEFAULT  = 'DEFAULT';
 const COMPLETE = 'COMPLETE';
 
-export default function ProfilePreview({
+const ProfilePreview = ({
   tableDatas,
   isFormComplete,
   formData,
@@ -20,7 +21,7 @@ export default function ProfilePreview({
   addUserDone,
   addUserComplete,
   addUserId
-}) {
+}) => {
   const containerClass = !isFormComplete ? DEFAULT : COMPLETE;
 
   const saveUserId = addUserId ? addUserId : userId;
@@ -89,6 +90,22 @@ export default function ProfilePreview({
       </div>
     </div>
   )
+}
+
+export default ProfilePreview;
+
+ProfilePreview.propTypes = {
+  tableDatas:        PropTypes.array,
+  isFormComplete:    PropTypes.bool,
+  formData:          PropTypes.object,
+  onSaveData:        PropTypes.func,
+  isLoadingOnSave:   PropTypes.bool,
+  isFormSaved:       PropTypes.bool,
+  backToEditProfile: PropTypes.func,
+  userId:            PropTypes.string,
+  addUserDone:       PropTypes.func,
+  addUserComplete:   PropTypes.func,
+  addUserId:         PropTypes.func
 }
 
 const CONTAINER_STYLE = {

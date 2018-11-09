@@ -33,16 +33,18 @@ const s = StyleSheet.create({
   [LOGIN_LABEL]:   LOGIN_LABEL_STYLE
 });
 
-export default function Label({
+const Label = ({
   children,
   variety = DEFAULT_LABEL
-}) {
+}) => {
   return (
     <label className={css(s[variety])}>
       {children}
     </label>
   )
 }
+
+export default Label;
 
 Label.propTypes = {
   children: PropTypes.node,

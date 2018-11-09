@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import SpinnerC from '../common/SpinnerC';
 
-export default function ProfilePreviewTable({
+const ProfilePreviewTable = ({
   tableData: {
     title,
     colspan,
@@ -13,7 +14,7 @@ export default function ProfilePreviewTable({
   },
   loading,
   isLoadingOnGetData,
-}) {
+}) => {
   let tableRows = [];
 
   rows.forEach((row, idxA) => {
@@ -58,6 +59,14 @@ export default function ProfilePreviewTable({
       </tbody>
     </table>  
   )
+}
+
+export default ProfilePreviewTable;
+
+ProfilePreviewTable.propTypes = {
+  tableData:          PropTypes.object,
+  loading:            PropTypes.bool,
+  isLoadingOnGetData: PropTypes.bool
 }
 
 const PREVIEW_LABEL_STYLE = {

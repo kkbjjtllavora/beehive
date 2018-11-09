@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import AuthLayout from 'components/authentication/AuthLayout';
 import { checkValidity } from 'utils/validation';
 import FormElements from 'components/forms/FormElements';
@@ -13,7 +14,7 @@ const initialState = {
   isFormValid: false,
 }
 
-export default class NewUserPage extends Component {
+class NewUserPage extends Component {
   state = initialState;
 
   handleSubmit = () => {
@@ -110,3 +111,10 @@ export default class NewUserPage extends Component {
   }
 }
 
+export default NewUserPage;
+
+NewUserPage.propTypes = {
+  addUser:          PropTypes.func,
+  addUserError:     PropTypes.string,
+  isAddUserLoading: PropTypes.bool
+}

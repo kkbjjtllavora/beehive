@@ -76,12 +76,12 @@ const s = StyleSheet.create({
   [INVESTMENT_BUTTON]:    INVESTMENT_BUTTON_STYLE,
 });
 
-export default function Button({
+const Button = ({
   children,
   onClick,
   variety = DEFAULT_BUTTON,
   ...rest 
-}) {
+}) => {
   return (
     <button 
       className={css(s[variety])}
@@ -91,6 +91,8 @@ export default function Button({
     </button>
   )
 }
+
+export default Button;
 
 Button.propTypes = {
   children:   PropTypes.any.isRequired,

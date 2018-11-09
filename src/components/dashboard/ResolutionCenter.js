@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import _ from 'lodash';
 import { Link } from 'react-router-dom';
@@ -35,10 +36,10 @@ const resolutionCenterBtns = [
   <ResolutionCenterBtn icon={circleWithMinusIcon} />
 ]
 
-export default function ResolutionCenter({
+const ResolutionCenter = ({
   discrepancyArray,
   fullName,
-}) {
+}) => {
   const discrepancyList = discrepancyArray.map((date, idx) => {
     return <DashboardListItem key={idx}
                               resolutionDate={date}
@@ -60,4 +61,15 @@ export default function ResolutionCenter({
       { discrepancyArray.length > 5 && 'More!' }
     </ShadowBox>
   )
+}
+
+export default ResolutionCenter;
+
+ResolutionCenter.propTypes = {
+  discrepancyArray: PropTypes.array,
+  fullName:         PropTypes.string
+}
+
+ResolutionCenterBtn.propTypes = {
+  icon: PropTypes.string
 }

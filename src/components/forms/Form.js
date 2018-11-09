@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Form({
+const Form = ({
   onSubmit,
   children
-}) {
+}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit();
@@ -16,6 +16,8 @@ export default function Form({
     </form>
   )
 }
+
+export default Form;
 
 Form.propTypes = {
   onSubmit: PropTypes.func,

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
 
 const HEADER_WRAPPER_STYLE = {
@@ -15,12 +16,18 @@ const s = StyleSheet.create({
   headerWrapper: HEADER_WRAPPER_STYLE,
 });
 
-export default function HeaderContainer({
+const HeaderContainer = ({
   children
-}) {
+}) => {
   return (
     <header className={css(s.headerWrapper)}>
       { children }
     </header>
   )
+}
+
+export default HeaderContainer;
+
+HeaderContainer.propTypes = {
+  children: PropTypes.node.isRequired
 }
