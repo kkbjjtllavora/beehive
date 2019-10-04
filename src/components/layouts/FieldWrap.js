@@ -35,10 +35,8 @@ const FieldWrap = ({
     <Label>{label}</Label>;
 
   const renderCheck = () => 
-    <span 
-      className={css(s.validationCheck)}
-      style={{ top: !label ? '5px' : '22px' }}
-    >!</span>
+    <span className={css(s.validationCheck)}
+          style={{ top: !label ? '5px' : '22px' }}>!</span>
 
   return (
     <div className={css(s.inputWrapContainer)}>
