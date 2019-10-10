@@ -15,7 +15,7 @@ export const teamMembers = (state = initialState, action) => {
       return state.set('isLoading', true);
 
     case c.GET_TEAM_MEMBERS_END:
-      return state.set('isLoading': false);
+      return state.set('isLoading', false);
 
     case c.GET_TEAM_MEMBERS_SUCCESS:
       return state.set('teamMembers', action.members);

@@ -14,7 +14,7 @@ const WITH_TITLE_CONTAINER_STYLE = {
   width: '1300px',
   minHeight: '300px',
   boxSizing: 'border-box',
-  boxShadow: '2px 2px 10px 0px rgba(0,0,0,0.4)',
+  boxShadow: 'rgba(0,0,0,.2) 0 1px 1px',
 }
 
 const SHADOW_BOX_BODY_STYLE = {
