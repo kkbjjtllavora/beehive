@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import Dashboard from '../../components/dashboard/Dashboard';
-import { getTeamMembers, resetTeamMembersState } from './store/actions';
+import Dashboard from 'components/dashboard/Dashboard';
+import { getTeamMembers, resetTeamMembersState } from 'containers/dashboard/store/actions';
 
 const mapStateToProps = ({
   user: {

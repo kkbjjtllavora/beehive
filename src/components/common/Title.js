@@ -45,5 +45,10 @@ const Title = ({
 export default Title;
 
 Title.propTypes = {
-  children: PropTypes.node.isRequired
+  children:   PropTypes.node.isRequired,
+  titleColor: PropTypes.string,
+  variety:    PropTypes.oneOf([
+                TITLE_A,
+                TITLE_B
+              ])
 }

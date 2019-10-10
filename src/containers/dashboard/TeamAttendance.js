@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import TeamAttendance from '../../components/dashboard/TeamAttendance';
 import moment from 'moment';
+import TeamAttendance from 'components/dashboard/TeamAttendance';
 
 const mapStateToProps = ({
   teamMembers: {

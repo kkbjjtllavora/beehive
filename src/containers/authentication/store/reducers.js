@@ -1,6 +1,6 @@
 import { Record } from 'immutable';
-import * as c from './actionTypes';
-import ErrorMessages from '../../../constants/ErrorMessages';
+import * as c from 'containers/authentication/store/actionTypes';
+import ErrorMessages from 'constants/ErrorMessages';
 
 const userState = new Record({ 
   idToken:                null,

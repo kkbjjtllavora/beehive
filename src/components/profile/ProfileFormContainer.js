@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import FormElements from '../../containers/profile/FormElements';
-import Button, { MEMBER_BUTTON } from '../forms/Button';
+import FormElements from 'containers/profile/FormElements';
+import Button, { MEMBER_BUTTON } from 'components/forms/Button';
 
-export default function ProfileFormContainer({
+const ProfileFormContainer = ({
   isFormComplete,
   formTitle,
   onSubmit,
@@ -11,7 +12,7 @@ export default function ProfileFormContainer({
   formFields,
   isFormValid,
   isInitial,
-}) {
+}) => {
 
   const formFieldsOutput = formFields.map(({
     id,
@@ -73,6 +74,18 @@ export default function ProfileFormContainer({
       </form>
     </div>
   ) : null;
+}
+
+export default ProfileFormContainer;
+
+ProfileFormContainer.propTypes = {
+  isFormComplete:     PropTypes.bool,
+  formTitle:          PropTypes.string,
+  onSubmit:           PropTypes.func,
+  onSubmitBackButton: PropTypes.func,
+  formFields:         PropTypes.object,
+  isFormValid:        PropTypes.bool,
+  isInitial:          PropTypes.bool
 }
 
 const FORM_WRAP = {

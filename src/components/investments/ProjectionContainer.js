@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import { getRandomArbitrary, formatMoney } from '../../utils/number';
-import SpinnerB from '../common/SpinnerB';
+import { getRandomArbitrary, formatMoney } from 'utils/number';
+import SpinnerB from 'components/common/SpinnerB';
 
 const PROJECTION_CONTAINER_STYLE = {
   textAlign: 'center',
@@ -20,11 +21,11 @@ const s = StyleSheet.create({
   projectionValue:       PROJECTION_VALUE_STYLE,
 });
 
-export default function ProjectionContainer({
+const ProjectionContainer = ({
   saveAmount,
   investmentPeriod,
   isSaveAmountLoading
-}) {
+}) => {
   const projectionValue = ((investmentPeriod * 12) * saveAmount * getRandomArbitrary(1,2)).toFixed(0)
 
   return (
@@ -36,4 +37,12 @@ export default function ProjectionContainer({
       </p>
     </div>
   )
+}
+
+export default ProjectionContainer;
+
+ProjectionContainer.propTypes = {
+  saveAmount:          PropTypes.string,
+  investmentPeriod:    PropTypes.number,
+  isSaveAmountLoading: PropTypes.string
 }

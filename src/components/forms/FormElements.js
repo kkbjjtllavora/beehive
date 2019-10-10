@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Input from './Input';
-import Select from './Select';
-import FieldWrap from '../layouts/FieldWrap';
+import Input from 'components/forms/Input';
+import Select from 'components/forms/Select';
+import FieldWrap from 'components/layouts/FieldWrap';
 
 export const INPUT       = 'INPUT';
 export const SELECT      = 'SELECT';
 export const TEXTAREA    = 'TEXTAREA';
 
-export default function FormElements({
+const FormElements = ({
   elementConfig,
   elementType,
   value,
@@ -17,7 +17,7 @@ export default function FormElements({
   label,
   onChange,
   touched,
-}) {
+}) => {
   let formElement = null;
 
   switch(elementType) {
@@ -64,6 +64,8 @@ export default function FormElements({
     </FieldWrap>
   )
 }
+
+export default FormElements;
 
 FormElements.propTypes = {
   elementConfig:    PropTypes.object,

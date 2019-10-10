@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import ClearfixBox from '../layouts/ClearfixBox';
-import timeHorizonIcon from '../../assets/images/time-horizon-icon.png';
+import ClearfixBox from 'components/layouts/ClearfixBox';
+import timeHorizonIcon from 'assets/images/time-horizon-icon.png';
 
 const GAUGE_CONTAINER_STYLE = {
   marginBottom: '15px',
@@ -32,11 +33,11 @@ const s = StyleSheet.create({
   gaugeLabel:         GAUGE_LABEL_STYLE,
 });
 
-export default function GaugeContainer({
+const GaugeContainer = ({
   labels,
   toleranceIcon,
   riskTolerance
-}) {
+}) => {
   const gaugeContent = labels.map((label, idx) => {
     const thumbSrc = label === 'Time Horizon' ? timeHorizonIcon : toleranceIcon[riskTolerance];
 
@@ -55,4 +56,12 @@ export default function GaugeContainer({
       <ClearfixBox />
     </div>
   )
+}
+
+export default GaugeContainer;
+
+GaugeContainer.propTypes = {
+  labels:        PropTypes.array,
+  toleranceIcon: PropTypes.object,
+  riskTolerance: PropTypes.string
 }

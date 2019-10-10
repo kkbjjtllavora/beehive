@@ -1,7 +1,7 @@
 import moment from 'moment';
-import axios from '../../../axios-instance';
-import * as c from './actionTypes';
-import { ADD_USER_URL, SIGNIN_USER_URL } from '../../../constants/Api';
+import axios from 'axios-instance';
+import * as c from 'containers/authentication/store/actionTypes';
+import { ADD_USER_URL, SIGNIN_USER_URL } from 'constants/Api';
 
 export const addUserStart = () => ({ 
   type: c.ADD_USER_START 
@@ -53,7 +53,11 @@ export const authUserFail = (error) => ({
   type: c.AUTH_USER_FAIL
 });
 
-export const authUser = (idToken, localId, expiresIn) => ({
+export const authUser = (
+  idToken, 
+  localId, 
+  expiresIn
+) => ({
   idToken,
   localId,
   expiresIn,
@@ -65,7 +69,13 @@ export const setUserAttendance = (data) => ({
   type: c.SET_USER_ATTENDANCE,
 });
 
-export const updateUserAttendance = (userId, data, date, idToken, expiresIn) => {
+export const updateUserAttendance = (
+  userId, 
+  data, 
+  date, 
+  idToken, 
+  expiresIn
+) => {
   return dispatch => {
     axios.put(`/users/${userId}/attendance/${date}.json`, data)
       .then(responseY => {
@@ -81,7 +91,11 @@ export const updateUserAttendance = (userId, data, date, idToken, expiresIn) => 
   }
 }
 
-export const getUserAttendance = (localId, idToken, expiresIn) => {
+export const getUserAttendance = (
+  localId, 
+  idToken, 
+  expiresIn
+) => {
   return dispatch => {
     const date = moment().format('MM-DD-YY');
     const time = moment().format('hh:mm A');

@@ -1,9 +1,9 @@
 import * as c from './actionTypes';
 import { Record } from 'immutable';
-import { checkValidity } from '../../../utils/validation';
-import basicInfo, { BASIC_INFO } from '../../../components/profile/fieldConstants/basicInformation';
-import workInfo, { WORK_INFO } from '../../../components/profile/fieldConstants/workInformation';
-import govInfo, { GOV_INFO } from '../../../components/profile/fieldConstants/govInformation';
+import { checkValidity } from 'utils/validation';
+import basicInfo, { BASIC_INFO } from 'components/profile/fieldConstants/basicInformation';
+import workInfo, { WORK_INFO } from 'components/profile/fieldConstants/workInformation';
+import govInfo, { GOV_INFO } from 'components/profile/fieldConstants/govInformation';
 
 export const INFO_STORE = [
   BASIC_INFO, 

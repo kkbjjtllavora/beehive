@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import moment from 'moment';
-import ShadowBox from '../../containers/layouts/ShadowBox';
-import DashboardListItem from './DashboardListItem';
-import thumb from '../../assets/images/user-icon-2.png';
+import ShadowBox from 'containers/layouts/ShadowBox';
+import DashboardListItem from 'components/dashboard/DashboardListItem';
+import thumb from 'assets/images/user-icon-2.png';
 
 const NO_ANNOUNCEMENT_STYLE = {
   textAlign: 'center',
@@ -16,17 +17,16 @@ const s = StyleSheet.create({
   noAnnouncement: NO_ANNOUNCEMENT_STYLE,
 });
 
-export default function Announcement({
+const Announcement = ({
   newUsersArray
-}) {
+}) => {
   const announcementsList = newUsersArray.map(({
     firstName,
     lastName
-  }, idx) => <DashboardListItem 
-          thumbSrc={thumb}
-          key={idx}
-          mainInfo={`${firstName} ${lastName}`}
-          rightInfo="First Day" />
+  }, idx) => <DashboardListItem thumbSrc={thumb}
+                                key={idx}
+                                mainInfo={`${firstName} ${lastName}`}
+                                rightInfo="First Day" />
   );
 
   const announcement = newUsersArray.length !== 0 ?
@@ -42,4 +42,10 @@ export default function Announcement({
       </ul>
     </ShadowBox>
   )
+}
+
+export default Announcement;
+
+Announcement.propTypes = {
+  newUsersArray: PropTypes.array
 }

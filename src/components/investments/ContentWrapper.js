@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
 
 const CONTENT_CONTAINER_STYLE = {
@@ -20,9 +21,9 @@ const s = StyleSheet.create({
   contentWrapper:     CONTENT_WRAPPER_STYLE,  
 });
 
-export default function ContentWrapper({
+const ContentWrapper = ({
   children
-}) {
+}) => {
   return (
     <div className={css(s.contentContainer)}>
       <div className={css(s.contentWrapper)}>
@@ -30,4 +31,10 @@ export default function ContentWrapper({
       </div>
     </div>
   )
+}
+
+export default ContentWrapper;
+
+ContentWrapper.propTypes = {
+  children: PropTypes.node.isRequired
 }

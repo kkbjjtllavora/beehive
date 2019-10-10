@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import { Link } from 'react-router-dom';
-import ShadowBox from '../../containers/layouts/ShadowBox';
-import Button, { INVESTMENT_BUTTON } from '../forms/Button';
-import investmentIcon from '../../assets/images/investments-icon.png';
+import ShadowBox from 'containers/layouts/ShadowBox';
+import Button, { INVESTMENT_BUTTON } from 'components/forms/Button';
+import investmentIcon from 'assets/images/investments-icon.png';
 
 const INVESTMENT_ICON_STYLE = {
   width: '80%',
@@ -41,7 +41,7 @@ const s = StyleSheet.create({
   detailsContainer:       DETAILS_CONTAINER_STYLE,
 });
 
-export default function Investments() {
+const Investments = () => {
   return (
     <ShadowBox title="Investments" width="100%" titleColor="#2ecc71">
       <div className={css(s.detailsContainer)}>
@@ -66,3 +66,5 @@ export default function Investments() {
     </ShadowBox>
   )
 }
+
+export default Investments;

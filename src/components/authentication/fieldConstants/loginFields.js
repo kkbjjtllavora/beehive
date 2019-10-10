@@ -1,5 +1,5 @@
-import { INPUT } from 'src/components/forms/FormElements';
-import { MEMBER_INPUT } from 'src/components/forms/Input';
+import { INPUT } from 'components/forms/FormElements';
+import { MEMBER_INPUT } from 'components/forms/Input';
 
 export const email       = 'email';
 export const password    = 'password';

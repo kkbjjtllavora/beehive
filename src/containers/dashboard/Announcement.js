@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import moment from 'moment';
-import Announcement from '../../components/dashboard/Announcement';
+import Announcement from 'components/dashboard/Announcement';
 
 const mapStateToProps = ({
   teamMembers: {

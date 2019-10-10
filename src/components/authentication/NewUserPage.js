@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-import AuthLayout from 'src/components/authentication/AuthLayout';
-import { checkValidity } from 'src/utils/validation';
-import FormElements from 'src/components/forms/FormElements';
-import Form from 'src/components/forms/Form';
-import BackToLoginLink from 'src/components/authentication/BackToLoginLink';
-import AuthButton from 'src/components/authentication/AuthButton';
-import AuthErrorMessage from 'src/components/authentication/AuthErrorMessage';
-import newUserFields from 'src/components/authentication/fieldConstants/newUserFields';
+import PropTypes from 'prop-types';
+import AuthLayout from 'components/authentication/AuthLayout';
+import { checkValidity } from 'utils/validation';
+import FormElements from 'components/forms/FormElements';
+import Form from 'components/forms/Form';
+import BackToLoginLink from 'components/authentication/BackToLoginLink';
+import AuthButton from 'components/authentication/AuthButton';
+import AuthErrorMessage from 'components/authentication/AuthErrorMessage';
+import newUserFields from 'components/authentication/fieldConstants/newUserFields';
 
 const initialState = {
   formFields: newUserFields,
   isFormValid: false,
 }
 
-export default class NewUserPage extends Component {
+class NewUserPage extends Component {
   state = initialState;
 
   handleSubmit = () => {
@@ -110,3 +111,10 @@ export default class NewUserPage extends Component {
   }
 }
 
+export default NewUserPage;
+
+NewUserPage.propTypes = {
+  addUser:          PropTypes.func,
+  addUserError:     PropTypes.string,
+  isAddUserLoading: PropTypes.bool
+}

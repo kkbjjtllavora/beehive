@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import moment from 'moment';
-import ResolutionCenter from '../../components/dashboard/ResolutionCenter';
+import ResolutionCenter from 'components/dashboard/ResolutionCenter';
 
 const mapStateToProps = ({
   user: {

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import AdminWrapper from '../layouts/AdminWrapper';
-import InvestmentsForm from '../../containers/investments/InvestmentsForm';
-import InvestmentsContent from '../../containers/investments/InvestmentsContent';
-import Title, { TITLE_B } from '../common/Title';
+import PropTypes from 'prop-types';
+import AdminWrapper from 'components/layouts/AdminWrapper';
+import InvestmentsForm from 'containers/investments/InvestmentsForm';
+import InvestmentsContent from 'containers/investments/InvestmentsContent';
+import Title, { TITLE_B } from 'components/common/Title';
 
-export default class InvestmentsPage extends Component {
+class InvestmentsPage extends Component {
   componentWillUnmount() {
     this.props.resetFormFields();
   }
@@ -24,4 +25,10 @@ export default class InvestmentsPage extends Component {
       </AdminWrapper>
     )
   }
+}
+
+export default InvestmentsPage;
+
+InvestmentsPage.propTypes = {
+  resetFormFields: PropTypes.func
 }

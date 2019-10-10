@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import AuthLogo from '../authentication/AuthLogo';
+import AuthLogo from 'components/authentication/AuthLogo';
 
 const LOGIN_CONTAINER_STYLE = {
   background: '#ecf0f1',

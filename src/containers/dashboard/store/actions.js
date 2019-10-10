@@ -1,6 +1,6 @@
-import axios from '../../../axios-instance';
 import _ from 'lodash';
-import * as c from './actionTypes';
+import axios from 'axios-instance';
+import * as c from 'containers/dashboard/store/actionTypes';
 
 export const getTeamMembersStart = () => ({
   type: c.GET_TEAM_MEMBERS_START

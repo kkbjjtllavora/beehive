@@ -1,16 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import '../assets/style.css';
-import * as Routes from '../constants/Routes';
+import 'assets/stylesheets/style.css';
+import * as Routes from 'constants/Routes';
 
 // authentication components
-import LoginPage from './authentication/LoginPage';
-import NewUserPage from './authentication/NewUserPage';
-import ProfilePage from './profile/ProfilePage';
-import Dashboard from './dashboard/Dashboard';
-import InvestmentsPage from './investments/InvestmentsPage';
-import CompanyPage from './company/CompanyPage';
+import LoginPage from 'containers/authentication/LoginPage';
+import NewUserPage from 'containers/authentication/NewUserPage';
+import ProfilePage from 'containers/profile/ProfilePage';
+import Dashboard from 'containers/dashboard/Dashboard';
+import InvestmentsPage from 'containers/investments/InvestmentsPage';
+import CompanyPage from 'containers/company/CompanyPage';
 
 const App = ({
   isAuth,
@@ -27,7 +27,6 @@ const App = ({
   )
 
   if(!isAuth) {
-    console.log(addUserDone);
     routes = (
       <Switch>
         { 

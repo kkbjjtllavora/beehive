@@ -1,6 +1,6 @@
-import { INPUT, SELECT } from '../../forms/FormElements';
-import { MEMBER_INPUT } from '../../forms/Input';
-import { MEMBER_SELECT } from '../../forms/Select';
+import { INPUT, SELECT } from 'components/forms/FormElements';
+import { MEMBER_INPUT } from 'components/forms/Input';
+import { MEMBER_SELECT } from 'components/forms/Select';
 
 export const BASIC_INFO  = 'basicInfo';
 

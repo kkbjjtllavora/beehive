@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import Label from '../forms/Label';
+import Label from 'components/forms/Label';
 
 const INPUT_WRAP_CONTAINER_STYLE = {
   boxSizing: 'border-box',
@@ -25,20 +25,18 @@ const s = StyleSheet.create({
   validationCheck:      VALIDATION_CHECK_STYLE,
 });
 
-export default function FieldWrap({
+const FieldWrap = ({
   children,
   label,
   valid,
   touched,
-}) {
+}) => {
   const renderLabel = (label) =>
     <Label>{label}</Label>;
 
   const renderCheck = () => 
-    <span 
-      className={css(s.validationCheck)}
-      style={{ top: !label ? '5px' : '22px' }}
-    >!</span>
+    <span className={css(s.validationCheck)}
+          style={{ top: !label ? '5px' : '22px' }}>!</span>
 
   return (
     <div className={css(s.inputWrapContainer)}>
@@ -50,6 +48,8 @@ export default function FieldWrap({
     </div>
   )
 }
+
+export default FieldWrap;
 
 FieldWrap.defaultProps = {
   label: ''

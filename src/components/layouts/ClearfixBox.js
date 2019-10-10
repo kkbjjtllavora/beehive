@@ -12,15 +12,17 @@ const s = StyleSheet.create({
   clearfix: CLEARFIX_STYLE
 });
 
-export default function ClearfixBox({ 
+const ClearfixBox = ({ 
   children
-}) {
+}) => {
   return (
     <div className={css(s.clearfix)}>
       {children}
     </div>
   )
 }
+
+export default ClearfixBox;
 
 ClearfixBox.propTypes = {
   children: PropTypes.node

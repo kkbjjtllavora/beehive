@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import ProjectionContainer from '../../components/investments/ProjectionContainer';
+import ProjectionContainer from 'components/investments/ProjectionContainer';
 
 const mapStateToProps = ({
   investments: {

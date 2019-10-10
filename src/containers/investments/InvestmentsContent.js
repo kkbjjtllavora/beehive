@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import InvestmentsContent from '../../components/investments/InvestmentsContent';
+import InvestmentsContent from 'components/investments/InvestmentsContent';
 
 const mapStateToProps = ({
   

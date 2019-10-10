@@ -1,14 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
 
-export default function AuthErrorMessage({
+const AuthErrorMessage = ({
   errMsg
-}) {
+}) => {
   return (
     <p className={css(s.errorContainer)}>
       { errMsg ? errMsg :null }
     </p>
   )
+}
+
+export default AuthErrorMessage;
+
+AuthErrorMessage.propTypes = {
+  errMsg: PropTypes.string
 }
 
 const ERROR_CONTAINER_STYLE = {

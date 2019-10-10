@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import Title from '../common/Title';
-import Spinner from '../common/Spinner';
+import Title from 'components/common/Title';
+import Spinner from 'components/common/Spinner';
 
 const WITH_TITLE = 'with-title';
 
@@ -14,7 +14,7 @@ const WITH_TITLE_CONTAINER_STYLE = {
   width: '1300px',
   minHeight: '300px',
   boxSizing: 'border-box',
-  boxShadow: '2px 2px 10px 0px rgba(0,0,0,0.4)',
+  boxShadow: 'rgba(0,0,0,.2) 0 1px 1px',
 }
 
 const SHADOW_BOX_BODY_STYLE = {
@@ -26,14 +26,14 @@ const s = StyleSheet.create({
   shadowBoxBody:  SHADOW_BOX_BODY_STYLE,
 });
 
-export default function ShadowBox({
+const ShadowBox = ({
   children,
   withTitle,
   title,
   width,
   titleColor,
   isLoading,
-}) {
+}) => {
   const variety = WITH_TITLE;
 
   const renderTitle = (title) => 
@@ -52,13 +52,18 @@ export default function ShadowBox({
   )
 }
 
+export default ShadowBox;
+
 ShadowBox.defaultProps = {
   title:     '',
   withTitle: true
 }
 
 ShadowBox.propTypes = {
-  children:  PropTypes.node.isRequired,
-  withTitle: PropTypes.bool,
-  title:     PropTypes.string
+  children:   PropTypes.node.isRequired,
+  withTitle:  PropTypes.bool,
+  title:      PropTypes.string,
+  width:      PropTypes.string,
+  titleColor: PropTypes.string,
+  isLoading:  PropTypes.bool
 }

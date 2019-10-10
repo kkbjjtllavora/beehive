@@ -1,6 +1,7 @@
 import React from 'react';
-import FormElements from '../forms/FormElements';
+import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
+import FormElements from 'components/forms/FormElements';
 
 const CONTAINER_LABEL_STYLE = {
   marginBottom: '15px',
@@ -19,10 +20,10 @@ const s = StyleSheet.create({
   containerLabel:    CONTAINER_LABEL_STYLE,
 });
 
-export default function InvestmentsForm({
+const InvestmentsForm = ({
   formFields,
   onChange
-}) {
+}) => {
   const formFieldsArray = [];
 
   for(let key in formFields) {
@@ -64,4 +65,11 @@ export default function InvestmentsForm({
       { formFieldsOutput }
     </div>
   )
+}
+
+export default InvestmentsForm;
+
+InvestmentsForm.propTypes = {
+  formFields: PropTypes.object,
+  onChange:   PropTypes.func
 }

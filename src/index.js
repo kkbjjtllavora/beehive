@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import App from './containers/App';
-import registerServiceWorker from './registerServiceWorker';
+import App from 'containers/App';
+import registerServiceWorker from 'registerServiceWorker';
 
-import { user } from './containers/authentication/store/reducers';
-import { profile } from './containers/profile/store/reducers';
-import { teamMembers } from './containers/dashboard/store/reducers';
-import { investments } from './containers/investments/store/reducers';
+import { user } from 'containers/authentication/store/reducers';
+import { profile } from 'containers/profile/store/reducers';
+import { teamMembers } from 'containers/dashboard/store/reducers';
+import { investments } from 'containers/investments/store/reducers';
 
 const rootReducer = combineReducers({
   user,

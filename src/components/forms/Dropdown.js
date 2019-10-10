@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import { Link } from 'react-router-dom';
-import userIcon from '../../assets/images/user-icon.png';
-import chevronDown from '../../assets/images/chevron-down-icon.png';
-import Backdrop from '../common/Backdrop';
+import userIcon from 'assets/images/user-icon.png';
+import chevronDown from 'assets/images/chevron-down-icon.png';
+import Backdrop from 'components/common/Backdrop';
 
 const initialState = {
   isOpen: false,

@@ -1,16 +1,16 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite/no-important';
 
 export const DEFAULT_INPUT = 'default';
 export const LOGIN_INPUT   = 'login-input';
 export const MEMBER_INPUT  = 'member-input';
 
-export default function Input({
+const Input = ({
   onChange,
   variety = DEFAULT_INPUT,
   ...rest
-}) {
+}) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     onChange({ [name]: value });
@@ -23,6 +23,8 @@ export default function Input({
       onChange={handleChange} />
   )
 }
+
+export default Input;
 
 Input.defaultProps = {
   name:           '',

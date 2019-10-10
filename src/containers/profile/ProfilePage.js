@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import ProfilePage from '../../components/profile/ProfilePage';
-import { resetProfileState, populateProfileData } from './store/actions';
+import ProfilePage from 'components/profile/ProfilePage';
+import { resetProfileState, populateProfileData } from 'containers/profile/store/actions';
 
 const mapStateToProps = ({
   user: {
